@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: bisque;
+}
+.gameContainer{
+    display:flex;
+    background-color:#d2f3ec;
+    width: 80%;
+    margin:20px auto;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    background-color:rgb(176, 224, 230);
+    /* border: 2px solid green; */
+    /* ye position isliye di hai taki line hamre grid disturb na kre */
+    position:relative;
+}
+.gameinfo{
+    /* border:2px solid black; */
+    padding:10px;
+}
+.x{
+    border:2px solid red;
+    font-size: 8vw;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.x:hover{
+    background-color:rgb(37, 196, 217);
+}
+
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.winimage img{
+    width:0;
+    transition:width 1s ease-in-out;
+}
+
+#reset{
+    padding:4px;
+    margin:10px;
+    cursor:pointer;
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+.line{
+    background-color: purple;
+    width:0;
+    height:3px;
+    transition: width 1s ease-in-out;
+    /* position dena nahut jaruri hai */
+    position:absolute;
+}
+
+@media screen and (max-width:800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+        /* background-color:rgb(176, 224, 230); */
+        /* border: 2px solid green; */
+    }
+ 
+    
+}
